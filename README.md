@@ -82,9 +82,9 @@ Follow the on-screen prompts to:
 
 - **Itemized Receipt:** Generates a detailed receipt showing the item name, price, quantity, and total cost for each order.
 
-- **Interactive Menu Display:** Displays the restaurant menu with categories, item names, and prices in a clear, numbered format.
-
 - **Accessibility:** Designed to cater to customers with hearing and vocal impairments, ensuring an inclusive ordering experience.
+
+- **Interactive Menu Display:** Displays the restaurant menu with categories, item names, and prices in a clear, numbered format.
 
 - **Error Handling:** Provides user-friendly error messages for invalid inputs and defaults to a quantity of 1 if an invalid quantity is entered.
 
