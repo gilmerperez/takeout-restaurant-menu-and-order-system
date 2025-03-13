@@ -59,16 +59,16 @@ def place_order(menu):
 
         # TODO: Update the order list using the update_order function
         # TODO: Send the order list, menu selection, and menu items as arguments
-        update_order(order, menu_selection, menu_items)
+        order = update_order(order, menu_selection, menu_items)
 
         # TODO: Ask the customer if they would like to order anything else
         # TODO: Let the customer know if they should type 'n' or 'N' to quit
         # TODO (cont): with the following text: "Would you like to keep ordering? (N)o to quit: "
-        user_input = input("Would you like to keep ordering? (N)o to quit: ")
+        continue_ordering = input("Would you like to keep ordering? (N)o to quit: ")
 
         # TODO: Write a conditional statement that checks the user's input
         # TODO: The conditional statement should check for 'n' or 'N'
-        if user_input.lower() == 'n': 
+        if continue_ordering.lower() == 'n':
             # TODO: Write a print statement that thanks the customer for their order
             # TODO (cont): with the text: "Thank you for your order."
             print("Thank you for your order.")
@@ -76,7 +76,7 @@ def place_order(menu):
             # TODO: Use list comprehension to create a list called prices_list,
             # TODO: which contains the total prices for each item in the order list:
             # TODO: The total price for each item should multiply the price by quantity
-            prices_list = [item["price"] * item["quantity"] for item in order]
+            prices_list = [item["Price"] * item["Quantity"] for item in order]
 
             # TODO: Create an order_total from the prices list using sum()
             # TODO: Round the prices to 2 decimal places.
