@@ -110,32 +110,34 @@ def update_order(order, menu_selection, menu_items):
         menu_selection = int(menu_selection)
 
         # TODO: Check if the menu selection is in the menu items keys
-        if menu_selection in menu_items:
+        if menu_selection in menu_items.keys():
             # TODO: Store the item name as a variable
-            customer_choice = menu_items[menu_selection]
+            item_name = menu_items[menu_selection]["Item name"]
 
             # TODO: Ask the customer for the quantity of the menu item
             # TODO: Use the item name variable in the question
             # TODO: Use the following text: f"What quantity of {item_name} would you like? \n"
             # TODO (cont):                 + "(This will default to 1 if number is not entered)\n"
-            quantity = input(f"What quantity of {customer_choice} would you like? \n"
-                 "(This will default to 1 if number is not entered)\n")
+            quantity = input(f"What quantity of {item_name} would you like? \n"
+                            + "(This will default to 1 if number is not entered)\n")
             # TODO: Check if the quantity is a number, default to 1 if not
-            if not quantity.isdigit():
+            if quantity.isdigit():
+                quantity = int(quantity)
+            else:
                 quantity = 1
             # TODO: Add a dictionary to the order list
             # TODO: The dictionary should include the item name, price, and quantity
             # TODO: Use the following names for the dictionary keys:
             # TODO: "Item name", "Price", "Quantity"
             order.append({
-                "Item name": customer_choice,
-                "Price": menu_items[menu_selection],
+                "Item name": item_name,
+                "Price": menu_items[menu_selection]["Price"],
                 "Quantity": quantity
             })
         # TODO: When the user's input isn't valid,
         # TODO: tell the customer that their input isn't valid
         # TODO: Use the following text: "Sorry, that number isn't an option."
-        if menu_selection not in menu_items:
+        else:
             print("Sorry, that number isn't an option.")
     # TODO: When the menu selection wasn't valid:
     # TODO: Print the menu selection and
