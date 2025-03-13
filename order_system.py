@@ -127,7 +127,7 @@ def update_order(order, menu_selection, menu_items):
             # TODO: The dictionary should include the item name, price, and quantity
             # TODO: Use the following names for the dictionary keys:
             # TODO: "Item name", "Price", "Quantity"
-            order.apppend({
+            order.append({
                 "Item name": customer_choice,
                 "Price": menu_items[menu_selection],
                 "Quantity": quantity
