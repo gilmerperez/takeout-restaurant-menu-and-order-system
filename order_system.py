@@ -55,7 +55,7 @@ def place_order(menu):
 
         # TODO: Ask customer to input menu item number
         # TODO (cont): with the following text: "Type menu number: "
-        menu_selection = int(input("Type menu number: "))
+        menu_selection = input("Type menu number: ")
 
         # TODO: Update the order list using the update_order function
         # TODO: Send the order list, menu selection, and menu items as arguments
