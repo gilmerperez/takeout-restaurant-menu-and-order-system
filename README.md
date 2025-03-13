@@ -1,118 +1,105 @@
-# Module 21 Challenge: Takeout Restaurant Menu and Order System
+# Takeout Restaurant Menu and Order System
 
-## Your Task
+## Project Summary
 
-Welcome to this week's Challenge! This week, you will use your new Python skills to build out a program that allows customers to place orders with a takeout restaurant, and receive an itemized receipt.
+The **Takeout Restaurant Menu and Order System** is a Python-based command-line application designed to provide an accessible and user-friendly ordering experience for customers, particularly those with hearing and vocal impairments. The system allows users to view a restaurant menu, place orders, and receive an itemized receipt without the need for direct interaction with restaurant staff. This project solves the problem of accessibility in food ordering by offering a streamlined, text-based interface that ensures customers can independently browse menu items, select quantities, and finalize their orders.
 
-You have been provided with some starter code. This starter code contains various functions that will help you print the menu and receipt.
+The application is built using core Python programming concepts, including **conditionals**, **loops**, **functions**, and **list comprehension**. Data is stored in a **dictionary** and a **list of dictionaries**, enabling efficient organization and retrieval of menu items, prices, and order details. The system is designed to handle invalid inputs gracefully, providing error messages and default values to ensure a smooth user experience.
 
-You may read through all of the code, but you only need to add code to the `place_order()`, `update_order()`, and `print_itemized_receipt()` functions at the top of your starter file. Do not make any changes to the code below those functions as it may lead to errors.
+This project was developed as part of a coding challenge to demonstrate proficiency in Python programming and problem-solving. It highlights the importance of creating inclusive software solutions that cater to diverse user needs.
 
-The core skills you will utilize from your coding experience, specifically Python, will be conditionals, loops, functions, and list comprehension. Data used in this Challenge will be stored in a dictionary and a list of dictionaries.
+## Table of Contents
 
-## User Story
+- [Usage](#usage)
+- [Mock-Up](#mock-up)
+- [Instructions](#instructions)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Additional Resources](#additional-resources)
 
-```text
-AS A hungry customer with hearing and vocal impairments
-I WANT to view a menu, place an order, and see my receipt
-SO THAT I don't have to interact with a person until I collect my food
+## Usage
+
+To start the application, run the following command in your terminal:
+
+```bash
+python order_system.py
 ```
 
-## Acceptance Criteria
-
-```text
-GIVEN A restaurant order system
-WHEN I launch the program
-THEN I view all of the menu items listed with their category, name, and price
-WHEN I select an item from the menu by entering a number
-THEN I am asked the quantity of that item I want to order
-WHEN I choose the quantity
-THEN I am asked if I would like to continue ordering or not
-WHEN I don't choose a valid quantity
-THEN I automatically receive 1 of that menu item
-WHEN I continue ordering
-THEN I view the menu again
-WHEN I quit ordering
-THEN I am shown my itemized order receipt and total price
-WHEN I enter an invalid response for the menu item
-THEN I am given an error message
-```
+This will launch the program and display the restaurant menu, allowing you to place orders and view your receipt.
 
 ## Mock-Up
 
-The following image shows a mock-up of the restaurant menu and ordering system:
+The following images demonstrate the functionality of the Takeout Restaurant Menu and Order System:
 
-!["Mock-up of the restaurant menu in Terminal"](./assets/python-terminal-menu.png)
+### 1. Restaurant Menu in Terminal
+![Mock-up of the restaurant menu in Terminal](./assets/python-terminal-menu.png)
 
-The following image shows a mock-up of the customer's receipt at the end of the program:
+### 2. Customer's Receipt in Terminal
 
-!["Mock-up of the customer's receipt in Terminal"](./assets/python-terminal-receipt.png)
+![Mock-up of the customer's receipt in Terminal](./assets/python-terminal-receipt.png)
 
-The following image shows a mock-up of the customer typing incorrect inputs for the menu options:
+### 3. Incorrect Menu Options
 
-!["Mock-up of the customer typing incorrect menu options."](./assets/incorrect-menu-options.png)
+![Mock-up of the customer typing incorrect menu options](./assets/incorrect-menu-options.png)
 
-## Getting Started
+## Instructions
 
-This is an autograded assignment, meaning that you will follow the link below to open the assignment in a new window in the Ed platform. You will modify the existing starter code files to meet the requirements listed below.
+Follow these steps to set up and use the Takeout Restaurant Menu and Order System:
 
-> **note** If you need any assistance with the Ed platform, please review the information on submitting assignments in Module 0.
+### 1. Clone the Repository:
 
-## Grading Requirements
+- Clone the repository to your local machine using the following command:
+```bash
+git clone takeout-restaurant-menu-and-order-system
+```
 
-This Challenge is graded based on the following criteria:
+### 2. Navigate to the Project Directory:
 
-### `place_order()` function 40%
+- Change to the project directory:
+```bash
+cd takeout-restaurant-menu-and-order-system
+```
 
-The `place_order()` function must have:
+### 3. Run the Application:
 
-* A continuous loop that continues displaying the menu and asking the customer what they want until the customer quits ordering. (6 points)
+- Execute the Python script to start the application:
+```bash
+python order_system.py
+```
 
-* A nested loop that loops through the menu dictionary to display the menu category and item followed by the price. (10 points)
+### 4. Place Your Order:
 
-* A conditional statement that asks the customer if they want to continue ordering and exits the continuous loop if they type 'n' or 'N'. (6 points)
+Follow the on-screen prompts to:
 
-* A list comprehension that calculates the total price for each order item by multiplying the quantity by the price. (8 points)
+- View the menu.
+- Select menu items by entering their corresponding numbers.
+- Specify the quantity for each item.
+- Continue ordering or quit to view your receipt.
 
-* A `sum()` calculation with the list comprehension to calculate the total order price, rounded to 2 decimal places. (4 points)
+## Key Features
 
-* A return statement that returns the customer's order in a list of dictionaries and the total order price. (6 points)
+- **Order Management:** Allows users to select items, specify quantities, and update their orders dynamically.
 
-### `update_order()` function 45%
+- **Itemized Receipt:** Generates a detailed receipt showing the item name, price, quantity, and total cost for each order.
 
-The `update_order()` function must have:
+- **Interactive Menu Display:** Displays the restaurant menu with categories, item names, and prices in a clear, numbered format.
 
-* A conditional statement that checks if the customer's input string can be converted to an integer and prints an error message if it does not. (6 points)
+- **Accessibility:** Designed to cater to customers with hearing and vocal impairments, ensuring an inclusive ordering experience.
 
-* Type casting to convert the customer's input string to an integer. (4 points)
+- **Error Handling:** Provides user-friendly error messages for invalid inputs and defaults to a quantity of 1 if an invalid quantity is entered.
 
-* A conditional statement that checks if the customer's input is an item on the menu and prints an error message if it is not. (6 points)
+## Technology Stack
 
-* A prompt to the customer that prints the name of the menu item to the user and asks the quantity they would like to order. (4 points)
+This project relies on the following tools and technologies:
 
-* A conditional statement that checks if the input quantity can be converted to an integer, then converts it to an integer, and defaults to 1 if it does not. (10 points)
+- **Python:** The core programming language used to build the application.
 
-* The order list is updated with the customer's item name, price, and quantity stored in a dictionary. (10 points)
+- **Dictionaries and Lists:** Used to store and manage menu items, prices, and order details.
 
-* The updated order list is returned from the function. (5 points)
+- **List Comprehension:** Used to calculate the total price for each order item and the overall order total.
 
-### `print_itemized_receipt()` function 15%
+- **Conditionals and Loops:** Implemented to handle user inputs, validate selections, and manage the ordering process.
 
-The `print_itemized_receipt()` function must have:
+## Additional Resources
 
-* A loop that loops through each element of the order list. (5 points)
-
-* The item name, price, and quantity from each dictionary in the order list are stored as variables. (5 points)
-
-* The item name, price, and quantity are sent to the `print_receipt_line` function in the correct order. (5 points)
-
-## How to Submit the Challenge
-
-Follow the link below to open this autograded assignment in a new tab. Once you have completed the assignment in the Ed platform, submit it and you will return to Bootcamp Spot.
-
-> **note** You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Next, and move on to the next Module.
-
-> **important** No matter how difficult the course becomes, you must always turn in original work. Plagiarism is not tolerated. If your instructional or support staff determine that you have plagiarized work, your Student Success Advisor will determine the appropriate course of action based on university policy. Such actions may include, but are not limited to, a documented plagiarism discussion, an incomplete or failing grade assignment, or ineligibility for graduation.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- **Python Documentation:** [Official Python Documentation](https://docs.python.org/3/)
