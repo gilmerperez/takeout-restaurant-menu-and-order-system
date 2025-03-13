@@ -31,7 +31,7 @@ def place_order(menu):
     while True:
         # TODO: Ask the customer what they want to order
         # TODO (cont): with the following text: "What would you like to order? "
-        user_input = input("What would you like to order? ")
+        print("What would you like to order? ")
 
         # Create a variable for the menu item number
         i = 1
