@@ -49,7 +49,7 @@ def place_order(menu):
         # TODO: Ask the customer if they would like to order anything else. Let the customer know if they should type 'N' or 'n' to quit with the following text: "Would you like to keep ordering? (N/n) to quit: "
         continue_ordering = input("Would you like to keep ordering? (N/n) to quit: ")
         # TODO: Write a conditional statement that checks the user's input. The conditional statement should check for 'N' or 'n'
-        if continue_ordering.lower() == 'n':
+        if continue_ordering.lower() == "n":
 
             # TODO: Write a print statement that thanks the customer for their order with the text: "Thank you for your order."
             print("Thank you for your order.")
@@ -62,6 +62,7 @@ def place_order(menu):
 
     # TODO: Return the order list and the order total
     return order, order_total
+
 
 def update_order(order, menu_selection, menu_items):
     """Checks if the customer menu selection is valid, then updates the order.
@@ -96,13 +97,15 @@ def update_order(order, menu_selection, menu_items):
 
             # TODO: Add a dictionary to the order list. The dictionary should include the item name, price, and quantity
             # TODO: Use the following names for the dictionary keys: "Item name", "Price", "Quantity"
-            order.append({
-                "Item name": item_name,
-                "Price": menu_items[menu_selection]["Price"],
-                "Quantity": quantity
-            })
+            order.append(
+                {
+                    "Item name": item_name,
+                    "Price": menu_items[menu_selection]["Price"],
+                    "Quantity": quantity,
+                }
+            )
 
-        # TODO: When the user's input isn't valid, tell the customer that their input isn't valid 
+        # TODO: When the user's input isn't valid, tell the customer that their input isn't valid
         # TODO: Use the following text: "Sorry, that number isn't an option."
         else:
             print("Sorry, that number isn't an option.")
@@ -114,6 +117,7 @@ def update_order(order, menu_selection, menu_items):
 
     # TODO: Return the updated order
     return order
+
 
 def print_itemized_receipt(receipt):
     """Prints an itemized receipt for the customer.
@@ -133,10 +137,12 @@ def print_itemized_receipt(receipt):
         # TODO: Print the receipt line using the print_receipt_line function. Send the item name, price, and quantity as separate arguments
         print_receipt_line(item_name, price, quantity)
 
+
 ##################################################
 #  STARTER CODE
 #  Do not modify any of the code below this line:
 ##################################################
+
 
 def print_receipt_line(item_name, price, quantity):
     """Prints a line of the receipt.
@@ -156,6 +162,7 @@ def print_receipt_line(item_name, price, quantity):
     # Print the item name, price, and quantity
     print(f"{item_name}{item_spaces}| ${price}{price_spaces}| {quantity}")
 
+
 def print_receipt_heading():
     """
     Prints the receipt heading.
@@ -163,6 +170,7 @@ def print_receipt_heading():
     print("----------------------------------------------------")
     print("Item name                       | Price  | Quantity")
     print("--------------------------------|--------|----------")
+
 
 def print_receipt_footer(total_price):
     """
@@ -175,6 +183,7 @@ def print_receipt_footer(total_price):
     print(f"Total price: ${total_price:.2f}")
     print("----------------------------------------------------")
 
+
 def print_menu_heading():
     """
     Prints the menu heading.
@@ -182,6 +191,7 @@ def print_menu_heading():
     print("--------------------------------------------------")
     print("Item # | Item name                        | Price")
     print("-------|----------------------------------|-------")
+
 
 def print_menu_line(index, food_category, meal, price):
     """Prints a line of the menu.
@@ -199,6 +209,7 @@ def print_menu_line(index, food_category, meal, price):
     else:
         i_spaces = " " * 5
     print(f"{index}{i_spaces}| {food_category} - {meal}{item_spaces} | ${price}")
+
 
 def get_menu_items_dict(menu):
     """Creates a dictionary of menu items and their prices mapped to their menu number.
@@ -219,13 +230,11 @@ def get_menu_items_dict(menu):
         # Loop through the options for each food category
         for meal, price in options.items():
             # Store the menu item number, item name and price in the menu_items
-            menu_items[i] = {
-                "Item name": food_category + " - " + meal,
-                "Price": price
-            }
+            menu_items[i] = {"Item name": food_category + " - " + meal, "Price": price}
             i += 1
 
     return menu_items
+
 
 def get_menu_dictionary():
     """Returns a dictionary of menu items and their prices.
@@ -240,33 +249,12 @@ def get_menu_dictionary():
     """
     # Create a meal menu dictionary
     meals = {
-        "Burrito": {
-            "Chicken": 4.49,
-            "Beef": 5.49,
-            "Vegetarian": 3.99
-        },
-        "Rice Bowl": {
-            "Teriyaki Chicken": 9.99,
-            "Sweet and Sour Pork": 8.99
-        },
-        "Sushi": {
-            "California Roll": 7.49,
-            "Spicy Tuna Roll": 8.49
-        },
-        "Noodles": {
-            "Pad Thai": 6.99,
-            "Lo Mein": 7.99,
-            "Mee Goreng": 8.99
-        },
-        "Pizza": {
-            "Cheese": 8.99,
-            "Pepperoni": 10.99,
-            "Vegetarian": 9.99
-        },
-        "Burger": {
-            "Chicken": 7.49,
-            "Beef": 8.49
-        }
+        "Burrito": {"Chicken": 4.49, "Beef": 5.49, "Vegetarian": 3.99},
+        "Rice Bowl": {"Teriyaki Chicken": 9.99, "Sweet and Sour Pork": 8.99},
+        "Sushi": {"California Roll": 7.49, "Spicy Tuna Roll": 8.49},
+        "Noodles": {"Pad Thai": 6.99, "Lo Mein": 7.99, "Mee Goreng": 8.99},
+        "Pizza": {"Cheese": 8.99, "Pepperoni": 10.99, "Vegetarian": 9.99},
+        "Burger": {"Chicken": 7.49, "Beef": 8.49},
     }
 
     """
@@ -289,6 +277,7 @@ def get_menu_dictionary():
     }
     """
     return meals
+
 
 # Run the program
 if __name__ == "__main__":
