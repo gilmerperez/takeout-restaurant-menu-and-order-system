@@ -1,6 +1,6 @@
 # Takeout Restaurant Menu and Order System
 
-## Project Summary
+## Project Overview
 
 The **Takeout Restaurant Menu and Order System** is a Python-based command-line application designed to provide an accessible and user-friendly ordering experience for customers, particularly those with hearing and vocal impairments. The system allows users to view a restaurant menu, place orders, and receive an itemized receipt without the need for direct interaction with restaurant staff. This project solves the problem of accessibility in food ordering by offering a streamlined, text-based interface that ensures customers can independently browse menu items, select quantities, and finalize their orders.
 
@@ -35,7 +35,6 @@ The following images demonstrate the functionality of the Takeout Restaurant Men
 ![Mock-up of the restaurant menu in Terminal](./assets/python-terminal-menu.png)
 
 ### 2. Customer's Receipt in Terminal
-
 ![Mock-up of the customer's receipt in Terminal](./assets/python-terminal-receipt.png)
 
 ### 3. Incorrect Menu Options
@@ -78,27 +77,19 @@ Follow the on-screen prompts to:
 ## Key Features
 
 - **Order Management:** Allows users to select items, specify quantities, and update their orders dynamically.
-
 - **Itemized Receipt:** Generates a detailed receipt showing the item name, price, quantity, and total cost for each order.
-
-- **Accessibility:** Designed to cater to customers with hearing and vocal impairments, ensuring an inclusive ordering experience.
-
 - **Interactive Menu Display:** Displays the restaurant menu with categories, item names, and prices in a clear, numbered format.
-
+- **Accessibility:** Designed to cater to customers with hearing and vocal impairments, ensuring an inclusive ordering experience.
 - **Error Handling:** Provides user-friendly error messages for invalid inputs and defaults to a quantity of 1 if an invalid quantity is entered.
 
 ## Technology Stack
 
 This project relies on the following tools and technologies:
-
 - **Python:** The core programming language used to build the application.
-
 - **Dictionaries and Lists:** Used to store and manage menu items, prices, and order details.
-
 - **List Comprehension:** Used to calculate the total price for each order item and the overall order total.
-
 - **Conditionals and Loops:** Implemented to handle user inputs, validate selections, and manage the ordering process.
 
 ## Additional Resources
 
-- Python Documentation: [Official Python Documentation](https://docs.python.org/3/)
+Python Documentation: [Official Python Documentation](https://docs.python.org/3/)
