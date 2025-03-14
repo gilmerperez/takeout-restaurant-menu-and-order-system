@@ -46,31 +46,30 @@ The following images demonstrate the functionality of the Takeout Restaurant Men
 
 Follow these steps to set up and use the Takeout Restaurant Menu and Order System:
 
-### 1. Clone the Repository:
+### 1. Clone the Repository
 
-- Clone the repository to your local machine using the following command:
+Clone the repository to your local machine using the following command:
 ```bash
 git clone takeout-restaurant-menu-and-order-system
 ```
 
-### 2. Navigate to the Project Directory:
+### 2. Navigate to the Project Directory
 
-- Change to the project directory:
+Change to the project directory:
 ```bash
 cd takeout-restaurant-menu-and-order-system
 ```
 
-### 3. Run the Application:
+### 3. Run the Application
 
-- Execute the Python script to start the application:
+Execute the Python script to start the application:
 ```bash
 python order_system.py
 ```
 
-### 4. Place Your Order:
+### 4. Place Your Order
 
 Follow the on-screen prompts to:
-
 - View the menu.
 - Select menu items by entering their corresponding numbers.
 - Specify the quantity for each item.
@@ -102,4 +101,4 @@ This project relies on the following tools and technologies:
 
 ## Additional Resources
 
-- **Python Documentation:** [Official Python Documentation](https://docs.python.org/3/)
+- Python Documentation: [Official Python Documentation](https://docs.python.org/3/)
